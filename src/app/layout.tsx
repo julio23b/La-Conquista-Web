@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   icons: {
     icon: "/icon.png",
   },
-  metadataBase: new URL("https://laconquistatextil.vercel.app/"),
+  metadataBase: new URL("https://la-conquista-web.vercel.app/"),
   openGraph: {
     title: "LA CONQUISTA | Fabrica De Alfombras, Trapos de Piso, Rejillas, Caminos de Mesa",
     description: "Pagina web oficial de la fabrica de alfombras, trapos de piso, rejillas, caminos de mesa LA CONQUISTA",
-    url: "https://laconquistatextil.vercel.app/",
+    url: "https://la-conquista-web.vercel.app/",
     siteName: "LA CONQUISTA",
     images: [
       {
