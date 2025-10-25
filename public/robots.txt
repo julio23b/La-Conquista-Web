@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://laconquistatextil.vercel.app/
+Host: https://la-conquista-web.vercel.app/
 
 # Sitemaps
-Sitemap: https://laconquistatextil.vercel.app/sitemap.xml
+Sitemap: https://la-conquista-web.vercel.app/sitemap.xml
