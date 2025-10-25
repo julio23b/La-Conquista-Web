@@ -25,23 +25,29 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
     setCurrent((prev) => (prev - 1 + images.length) % images.length);
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
+    // Fondo clickeable
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4"
+      onClick={onClose}
+    >
       <motion.div
-        initial={{ opacity: 0, scale: 0.9 }}
+        initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
-        exit={{ opacity: 0, scale: 0.9 }}
-        className="relative w-full max-w-4xl rounded-2xl bg-white p-6 shadow-xl"
+        exit={{ opacity: 0, scale: 0.95 }}
+        transition={{ duration: 0.3 }}
+        onClick={(e) => e.stopPropagation()} // Evita cerrar si tocan dentro
+        className="relative w-full max-w-4xl rounded-2xl bg-white p-6 shadow-xl overflow-y-auto max-h-[90vh]"
       >
-        {/* Botón cerrar */}
+        {/* Botón cerrar táctil */}
         <button
           onClick={onClose}
           aria-label="Cerrar modal"
-          className="absolute right-4 top-4 text-gray-500 hover:text-gray-800"
+          className="absolute right-3 top-3 p-3 rounded-full bg-white/80 backdrop-blur-sm text-gray-700 hover:bg-gray-200 shadow-md active:scale-95 transition md:right-4 md:top-4"
         >
-          <X size={24} />
+          <X size={28} />
         </button>
 
-        {/* Título y descripción */}
+        {/* Contenido */}
         <h2 className="mb-2 text-2xl font-bold text-gray-800">{product.title}</h2>
         <p className="mb-4 text-gray-600">{product.description}</p>
 
@@ -57,9 +63,9 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
           ))}
         </ul>
 
-        {/* Carrusel de imágenes */}
+        {/* Carrusel */}
         {images.length > 0 && (
-          <div className="relative w-full h-[500px] max-h-[70vh] rounded-xl overflow-hidden bg-gray-100">
+          <div className="relative w-full h-[400px] md:h-[500px] rounded-xl overflow-hidden bg-gray-100">
             <motion.div
               key={current}
               initial={{ opacity: 0, x: 50 }}
@@ -82,23 +88,23 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
                 <button
                   onClick={prevImage}
                   aria-label="Anterior"
-                  className="absolute left-3 top-1/2 -translate-y-1/2 bg-blue-600 text-white rounded-full p-4 md:p-5 shadow-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-300"
+                  className="absolute left-3 top-1/2 -translate-y-1/2 bg-blue-600 text-white rounded-full p-3 md:p-4 shadow-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-300"
                 >
-                  <span className="text-2xl md:text-3xl leading-none">‹</span>
+                  ‹
                 </button>
                 <button
                   onClick={nextImage}
                   aria-label="Siguiente"
-                  className="absolute right-3 top-1/2 -translate-y-1/2 bg-blue-600 text-white rounded-full p-4 md:p-5 shadow-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-300"
+                  className="absolute right-3 top-1/2 -translate-y-1/2 bg-blue-600 text-white rounded-full p-3 md:p-4 shadow-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-300"
                 >
-                  <span className="text-2xl md:text-3xl leading-none">›</span>
+                  ›
                 </button>
 
                 <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1">
                   {images.map((_, i) => (
                     <div
                       key={i}
-                      className={`w-3 h-3 rounded-full ${
+                      className={`w-2.5 h-2.5 rounded-full ${
                         i === current ? "bg-gray-800" : "bg-gray-400"
                       }`}
                     />
