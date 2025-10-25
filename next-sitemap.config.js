@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: 'https://laconquistatextil.vercel.app/',
+  siteUrl: 'https://la-conquista-web.vercel.app/',
   generateRobotsTxt: true,
   sitemapSize: 7000,
 };
