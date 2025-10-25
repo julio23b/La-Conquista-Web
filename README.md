@@ -22,6 +22,6 @@ Sitio web para la fábrica textil "LA CONQUISTA". Muestra productos (alfombras, 
    ```
 
 ## Contacto
-- Email: horizonteweb26@gmail.com  
+- Email: laconquista265@gmail.com  
 - Redes: enlaces dentro del sitio (WhatsApp, Facebook, Instagram)
 
