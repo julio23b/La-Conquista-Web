@@ -2,8 +2,5 @@
 User-agent: *
 Allow: /
 
-# Host
-Host: https://la-conquista-web.vercel.app/
-
 # Sitemaps
 Sitemap: https://la-conquista-web.vercel.app/sitemap.xml
