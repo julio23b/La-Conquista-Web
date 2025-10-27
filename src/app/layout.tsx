@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     "fábrica textil", "productos artesanales", "La Conquista"
   ],
   other: {
-    "google-site-verification": "gHhB_MWI_eqo1f7g1cXfo_KfVkptyzM0maPIjUqMuDE" />,
+    "google-site-verification": "gHhB_MWI_eqo1f7g1cXfo_KfVkptyzM0maPIjUqMuDE",
   },
 };
 
