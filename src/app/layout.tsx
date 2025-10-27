@@ -23,6 +23,16 @@ export const metadata: Metadata = {
     locale: "es_ES",
     type: "website",
   },
+  twitter: {
+  card: "summary_large_image",
+  title: "LA CONQUISTA | Fábrica de Alfombras y Textiles",
+  description: "Fábrica de alfombras, trapos de piso, rejillas y caminos de mesa.",
+  images: ["/icons/icon.png"],
+  },
+  keywords: [
+  "alfombras", "rejillas", "trapos de piso", "caminos de mesa", 
+  "fábrica textil", "productos artesanales", "La Conquista"
+  ],
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
