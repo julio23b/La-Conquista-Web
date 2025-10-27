@@ -33,6 +33,9 @@ export const metadata: Metadata = {
   "alfombras", "rejillas", "trapos de piso", "caminos de mesa", 
   "fábrica textil", "productos artesanales", "La Conquista"
   ],
+  other: {
+  "google-site-verification": "abc123xyz",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
