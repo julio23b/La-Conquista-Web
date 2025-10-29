@@ -13,14 +13,6 @@
   --font-mono: "Geist Mono", monospace;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #000000;
-    --foreground: #ffffff;
-    --color-muted: #1a1a1a;
-  }
-}
-
 html {
   scroll-behavior: smooth;
 }
