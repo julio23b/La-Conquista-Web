@@ -8,6 +8,14 @@ export const metadata: Metadata = {
     icon: "/icons/icon.png",
   },
   metadataBase: new URL("https://la-conquista-web.vercel.app/"),
+  icons: {
+    icon: [
+      { url: "/favicon.ico", type: "image/x-icon" },
+      { url: "/icons/icon.png", type: "image/png" },
+    ],
+    shortcut: ["/favicon.ico"],
+    apple: ["/icons/icon.png"],
+  },
   openGraph: {
     title: "LA CONQUISTA | Fábrica de Alfombras, Trapos de Piso, Rejillas y Caminos de Mesa",
     description: "Página web oficial de la fábrica de alfombras, trapos de piso, rejillas y caminos de mesa LA CONQUISTA.",
