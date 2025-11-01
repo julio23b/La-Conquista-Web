@@ -18,7 +18,7 @@ export default function Hero() {
               Ver Productos
             </a>
             <a href="mailto:laconquista265@gmail.com" className="px-4 py-2 rounded-lg border border-blue-600 text-blue-600 hover:bg-blue-50">
-              Contactamos
+              Contactanos
             </a>
           </div>
 
