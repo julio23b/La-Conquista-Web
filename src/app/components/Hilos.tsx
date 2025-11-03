@@ -1,27 +1,25 @@
 "use client";
 import { useState } from "react";
-import { products } from "../data/data";
-import ProductModal from "./ProductModal";
-import Hilos from "./Hilos"; // 👈 Importamos el componente de hilos
+import { hilos } from "../data/DataHilos";
+import HiloModal from "./HiloModal";
 
-export default function Products() {
+export default function Hilos() {
   const [selected, setSelected] = useState<string | null>(null);
 
   return (
-    <section id="productos" className="p-6 rounded-xl my-6 bg-white shadow-sm">
-      {/* Sección de Productos principales */}
+    <section id="hilos" className="p-6 rounded-xl my-6 bg-white shadow-sm">
       <h2 className="text-4xl font-semibold mb-6 text-gray-800 text-center">
-        Productos
+        Carreteles de Hilos
       </h2>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-12">
-        {Object.values(products).map((p) => {
-          const bgImage = p.imagen?.[0];
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        {hilos.map((h) => {
+          const bgImage = h.imagen?.[0];
 
           return (
             <div
-              key={p.id}
-              onClick={() => setSelected(p.id)}
+              key={h.id}
+              onClick={() => setSelected(h.id)}
               className="
                 relative p-15 border rounded 2x1 cursor-pointer flex flex-col overflow-hidden
                 transition-all duration-500 ease-in-out
@@ -29,37 +27,34 @@ export default function Products() {
                 group
               "
               style={{
-                backgroundImage: `url(${bgImage})`,
+                backgroundImage: bgImage ? `url(${bgImage})` : undefined,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
             >
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out" />
+              <div className="absolute inset-0 bg-black/25 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out" />
 
-              {/* Contenido */}
               <div className="relative z-10 bg-black/50 p-1 rounded-xl w-full transition-all duration-500 ease-in-out group-hover:scale-[1.02]">
                 <h3 className="text-lg font-semibold text-white mb-1 drop-shadow-md transition-all duration-500 ease-in-out group-hover:scale-105 text-center">
-                  {p.title}
+                  {h.title}
                 </h3>
+                {h.color && (
+                  <p className="text-sm text-gray-200 text-center">
+                    {Array.isArray(h.color) ? h.color.join(", ") : h.color}
+                  </p>
+                )}
               </div>
             </div>
           );
         })}
       </div>
 
-      {/* Modal de productos */}
       {selected && (
-        <ProductModal
-          product={products[selected]}
+        <HiloModal
+          hilo={hilos.find((x) => x.id === selected)!}
           onClose={() => setSelected(null)}
         />
       )}
-
-      {/* Sección de Hilos dentro del mismo bloque */}
-      <div className="mt-16">
-        <Hilos />
-      </div>
     </section>
   );
 }
