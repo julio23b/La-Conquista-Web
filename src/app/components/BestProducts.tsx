@@ -10,7 +10,7 @@ function ProductCard({ product }: { product: ProductType }) {
   return (
     <div className="p-4 border rounded-lg hover:shadow-md transition flex flex-col bg-white">
       {mainImage && (
-        <div className="relative w-full h-[260px] mb-4 overflow-hidden rounded-md">
+        <div className="relative w-full h-[350px] mb-4 overflow-hidden rounded-md">
           <Image
             src={mainImage}
             alt={product.title}

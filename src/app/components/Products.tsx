@@ -23,7 +23,7 @@ export default function Products() {
               key={p.id}
               onClick={() => setSelected(p.id)}
               className="
-                relative p-15 border rounded 2x1 cursor-pointer flex flex-col overflow-hidden
+                relative p-30 border rounded 2x1 cursor-pointer flex flex-col overflow-hidden
                 transition-all duration-500 ease-in-out
                 hover:scale-105 hover:-translate-y-1 hover:shadow-2xl
                 group
@@ -38,7 +38,7 @@ export default function Products() {
               <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out" />
 
               {/* Contenido */}
-              <div className="relative z-10 bg-black/50 p-1 rounded-xl w-full transition-all duration-500 ease-in-out group-hover:scale-[1.02]">
+              <div className="relative z-10 bg-black/50 rounded-xl w-full transition-all duration-500 ease-in-out group-hover:scale-[1.02]">
                 <h3 className="text-lg font-semibold text-white mb-1 drop-shadow-md transition-all duration-500 ease-in-out group-hover:scale-105 text-center">
                   {p.title}
                 </h3>
