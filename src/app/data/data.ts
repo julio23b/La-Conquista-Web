@@ -17,6 +17,7 @@ export const products: Record<string, Products> = {
     colors: "Variedad de colores",
     size: "50cm a 2m de diámetro",
     imagen: [
+      "/img-products/Alfombra/alfom-redonda5.jpg",
       "/img-products/Alfombra/alfom-redonda1.jpg",
       "/img-products/Alfombra/alfom-redonda2.webp",
       "/img-products/Alfombra/alfom-redonda3.webp",
@@ -108,9 +109,10 @@ export const products: Record<string, Products> = {
       "Alfombra con flecos decorativos, tejida en algodón, ideal para darle un toque rústico y natural a tus ambientes.",
     colors: "Variedad de colores",
     size: "De 50cm x 1m a 50cm x 2m",
-    imagen: ["/img-products/Alfombra/veteada-con-flecos.webp",
-              "/img-products/Alfombra/veteada-con-flecos1.webp",
-    ],
+    imagen: [ "/img-products/Alfombra/veteada-con-flecos2.jpg",
+            "/img-products/Alfombra/veteada-con-flecos.webp",
+            "/img-products/Alfombra/veteada-con-flecos1.webp",
+  ],
   },
   caminoDeMesa: {
     id: "caminoDeMesa",

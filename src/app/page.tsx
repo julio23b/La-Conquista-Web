@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import BestProducts from "./components/BestProducts";
 import Products from "./components/Products";
+import About from "./components/about";
 import Footer from "./components/Footer";
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       <Hero />
       <BestProducts />
       <Products />
+      <About />
       <Footer />
     </main>
   );

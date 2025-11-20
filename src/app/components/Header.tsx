@@ -5,6 +5,7 @@ export default function Header() {
         <a href="#">Inicio</a>
         <a href="#bestproducts">Mas vendidos</a>
         <a href="#productos">Productos</a>
+        <a href="#about">Sobre Nosotros</a>
       </nav>
     </header>
   );
