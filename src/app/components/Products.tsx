@@ -37,11 +37,11 @@ export default function Products() {
               {/* Overlay */}
               <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out" />
 
-              {/* Contenido */}
-              <div className="relative z-10 bg-black/50 rounded-xl w-full transition-all duration-500 ease-in-out group-hover:scale-[1.02]">
-                <h3 className="text-lg font-semibold text-white mb-1 drop-shadow-md transition-all duration-500 ease-in-out group-hover:scale-105 text-center">
+              {/* Contenido (título pegado al borde inferior del área de imagen) */}
+              <div className="relative z-10 w-full transition-all duration-500 ease-in-out group-hover:scale-[1.02]">
+                <div className="absolute left-0 right-0 bottom-0 px-3 py-2 bg-black/70 text-white text-center text-sm">
                   {p.title}
-                </h3>
+                </div>
               </div>
             </div>
           );

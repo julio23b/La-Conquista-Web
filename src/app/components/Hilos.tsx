@@ -32,17 +32,6 @@ export default function Hilos() {
               }}
             >
               <div className="absolute inset-0 bg-black/25 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out" />
-
-              <div className="relative z-10 bg-black/50 p-1 rounded-xl w-full transition-all duration-500 ease-in-out group-hover:scale-[1.02]">
-                <h3 className="text-lg font-semibold text-white mb-1 drop-shadow-md transition-all duration-500 ease-in-out group-hover:scale-105 text-center">
-                  {h.title}
-                </h3>
-                {h.color && (
-                  <p className="text-sm text-gray-200 text-center">
-                    {Array.isArray(h.color) ? h.color.join(", ") : h.color}
-                  </p>
-                )}
-              </div>
             </div>
           );
         })}
